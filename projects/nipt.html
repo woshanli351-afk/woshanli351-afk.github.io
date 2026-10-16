@@ -1,1 +1,109 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="结合回归、纵向数据处理、生存分析和分组方法，研究检测阈值与测量误差下的检测时间决策。"><meta name="theme-color" content="#17392f"><title>从浓度预测到检测时机选择 | 李定山 LI Dingshan</title><link rel="stylesheet" href="../style.css"><link rel="canonical" href="https://woshanli351-afk.github.io/projects/nipt.html"><meta property="og:type" content="website"><meta property="og:url" content="https://woshanli351-afk.github.io/projects/nipt.html"><meta property="og:site_name" content="李定山 LI Dingshan · 数据科学"></head><body><a class="skip" href="#main">跳到正文</a><div class="wrap"><header><a class="brand" href="../index.html">李定山<span class="name-en"> LI Dingshan</span><span style="color:#ae512f"> / </span>DS</a><nav aria-label="主导航"><a href="../index.html#awards">荣誉</a><a href="../index.html#projects">项目</a><a href="../index.html#about">关于</a><a href="../index.html#contact">联系</a></nav></header><main id="main" class="article"><a class="more" href="../index.html#projects">← 返回项目</a><p class="eyebrow" style="margin-top:40px">数学建模 · 广东省三等奖</p><h1>从浓度预测到检测时机选择</h1><p class="intro">结合回归、纵向数据处理、生存分析和分组方法，研究检测阈值与测量误差下的检测时间决策。</p><div class="callout"><strong>1,000</strong> · 次测量误差模拟</div><p class="award-proof">2025 年广东省大学生数学建模竞赛<br>暨全国大学生数学建模竞赛广东赛区<br><strong>本科组三等奖</strong></p><h2>问题与目标</h2><p>在竞赛数据与假设下，分析胎儿 Y 染色体浓度与检测时机的关系，研究不同分组的检测时间选择。</p><h2>项目工作</h2><ul><li>清洗包含 20 余项特征的数据，比较回归模型，随机森林在测试集上的 R² 为 0.52。</li><li>使用保序回归处理纵向测量，估计首次达到 4% 阈值的时间。</li><li>结合 K-means BMI 分组、Kaplan–Meier 分析和双准则决策模型研究分组检测时机。</li><li>扩展到多因素分组与回归，并使用 1,000 次蒙特卡洛模拟检验测量误差下的建议稳定性。</li></ul><h2>结果与边界</h2><p>该项目展示从预测到决策分析的流程。结论限于竞赛数据、模型与假设，不构成临床检测建议；R² 也不等同于分类准确率。</p><h2>我的角色</h2><p>团队成员。参与数据处理、预测建模与检测时机分析。团队获广东赛区三等奖。</p><p class="muted" style="margin-top:45px;font-size:13px">项目概述依据个人简历整理。详细实验配置与结果以项目报告为准。</p><a class="button" href="../index.html#contact">交流这个项目 ↗</a></main><footer><span>© 2026 李定山 LI Dingshan</span><span>数据科学 · 数学建模 · 决策优化</span></footer></div></body></html>
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="结合回归、纵向数据处理、生存分析和分组方法，研究检测阈值与测量误差下的检测时间决策。">
+  <meta name="theme-color" content="#1f49b6"><title>从浓度预测到检测时机选择 | 李定山 LI Dingshan</title>
+  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../project.css"><link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://woshanli351-afk.github.io/projects/nipt.html"><meta property="og:type" content="website"><meta property="og:url" content="https://woshanli351-afk.github.io/projects/nipt.html"><meta property="og:site_name" content="李定山 LI Dingshan · 数据科学">
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">跳到正文</a><div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="case-header">
+    <a class="case-brand" href="../index.html"><span>LI DINGSHAN</span><small>李定山 · DATA SCIENCE</small></a>
+    <nav aria-label="主导航"><a href="../index.html">主页</a><a href="../index.html#honors">荣誉</a><a href="../index.html#projects">项目</a><a href="../index.html#contact">联系</a></nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero">
+      <a class="back-link" href="../index.html#projects">← 返回项目索引</a>
+      <div class="case-heading reveal">
+        <p class="case-label">[CASE 03] MODELING · TIMING DECISION</p>
+        <h1 class="case-display">TIMING<br><span class="outline">DECISION</span></h1>
+        <h2 class="case-title">从浓度预测到检测时机选择</h2>
+        <p class="case-summary">连接回归、纵向数据、生存分析与分组决策，研究阈值和测量误差如何改变建议检测时间。</p>
+      </div>
+      <div class="hero-art reveal" aria-label="浓度预测与检测时机选择示意图">
+        <svg viewBox="0 0 800 520" role="img" aria-label="浓度预测与检测时机选择的抽象图">
+          <path d="M70 430H745M70 430V70" stroke="currentColor" stroke-width="2"/><path class="draw" d="M70 400C215 384 231 286 347 269s137-12 207-102 134-70 191-79" fill="none" stroke="currentColor" stroke-width="5"/>
+          <path d="M70 413C200 401 287 347 380 324s119-47 179-103 125-99 186-115" fill="none" stroke="currentColor" stroke-width="2"/><path d="M70 246H745" stroke="currentColor" stroke-width="2" stroke-dasharray="5 7"/>
+          <circle class="node" cx="386" cy="318" r="18"/><text x="402" y="309">DECISION POINT</text><text x="75" y="232">THRESHOLD</text>
+        </svg><span class="art-caption"><span>PREDICT → GROUP → DECIDE</span><span>/003</span></span>
+      </div>
+      <div class="case-meta reveal">
+        <p><span>PREDICTION</span><strong>R² 0.52</strong></p>
+        <p><span>ROBUSTNESS</span><strong>1,000 RUNS</strong></p>
+        <p><span>OFFICIAL HONOR</span><strong>省三等奖</strong></p>
+      </div>
+    </section>
+
+    <section class="award-banner reveal"><span>[HONOR]</span><strong>2025 全国大学生数学建模竞赛 · 广东赛区</strong><em>本科组三等奖</em></section>
+
+    <div class="case-content">
+      <section class="case-section" id="problem">
+        <div class="section-index reveal"><span>[01]</span><strong>PROBLEM</strong></div>
+        <div class="section-body reveal">
+          <h2>预测浓度只是中间步骤，真正的问题是何时检测。</h2>
+          <p class="lead">竞赛数据包含重复测量与二十余项特征。项目需要估计首次达到 4% 阈值的时间，再为不同人群分组形成检测时机建议。</p>
+          <p class="detail-copy">这使问题同时涉及连续值预测、纵向轨迹、删失数据和决策稳定性。单一回归结果不能直接回答“何时检测”，必须把模型输出继续转化为时间与风险判断。</p>
+        </div>
+      </section>
+
+      <section class="case-section" id="method">
+        <div class="section-index reveal"><span>[02]</span><strong>METHOD</strong></div>
+        <div class="section-body reveal">
+          <h2>从原始特征到分组检测建议。</h2>
+          <div class="process-flow">
+            <article class="process-step reveal"><span>/001 · CLEAN</span><h3>数据整理</h3><p>清洗二十余项特征，处理重复与纵向测量。</p></article>
+            <article class="process-step reveal"><span>/002 · PREDICT</span><h3>浓度预测</h3><p>比较回归模型，以随机森林形成预测基线。</p></article>
+            <article class="process-step reveal"><span>/003 · TIME</span><h3>阈值时间</h3><p>用保序回归与 Kaplan–Meier 估计首次达标时间。</p></article>
+            <article class="process-step reveal"><span>/004 · STRESS</span><h3>稳健性检验</h3><p>加入测量误差，运行 1,000 次蒙特卡洛模拟。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="comparison">
+        <div class="section-index reveal"><span>[03]</span><strong>COMPARE</strong></div>
+        <div class="section-body reveal">
+          <h2>每一种方法对应不同的决策问题。</h2>
+          <table class="comparison">
+            <thead><tr><th>方法</th><th>回答的问题</th><th>项目中的作用</th><th>主要边界</th></tr></thead>
+            <tbody>
+              <tr><td>随机森林回归</td><td>浓度大致是多少</td><td>测试集 R² 为 0.52，作为预测基线</td><td>预测能力有限，不能直接给出检测时间</td></tr>
+              <tr><td>保序回归</td><td>纵向轨迹何时达到阈值</td><td>约束拟合趋势，估计首次达到 4% 的时间</td><td>依赖单调趋势假设</td></tr>
+              <tr><td>K-means + KM</td><td>不同 BMI 组如何比较时间</td><td>形成分组生存曲线和候选时间</td><td>分组边界受样本与聚类设定影响</td></tr>
+              <tr><td>蒙特卡洛模拟</td><td>测量误差会不会改变建议</td><td>1,000 次扰动检验建议稳定性</td><td>结果依赖误差分布设定</td></tr>
+            </tbody>
+          </table>
+          <div class="result-grid">
+            <article class="result-card reveal"><span>FEATURES</span><strong>20+</strong><p>进入清洗、筛选与建模流程的特征数量级。</p></article>
+            <article class="result-card reveal"><span>TEST R²</span><strong>0.52</strong><p>随机森林的测试集决定系数，不等同于分类准确率。</p></article>
+            <article class="result-card reveal"><span>ERROR SIMULATION</span><strong>1,000</strong><p>用于观察测量误差下建议变化的模拟次数。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="evidence">
+        <div class="section-index reveal"><span>[04]</span><strong>EVIDENCE</strong></div>
+        <div class="section-body reveal">
+          <h2>个人贡献集中于建模链路。</h2>
+          <div class="contribution-box reveal">
+            <div class="contribution-head"><span>[PERSONAL CONTRIBUTION]</span><strong>预测、时间估计与决策建模</strong></div>
+            <ul class="evidence-list">
+              <li><span>/001</span><strong>预测建模</strong><p>参与特征处理、回归模型比较与随机森林基线构建。</p></li>
+              <li><span>/002</span><strong>时间建模</strong><p>把纵向测量转化为阈值到达时间，并结合分组生存分析。</p></li>
+              <li><span>/003</span><strong>稳健性建模</strong><p>设计测量误差扰动，用模拟检查检测时机建议是否稳定。</p></li>
+            </ul>
+          </div>
+          <div class="boundary"><strong>结果边界：</strong>结论只适用于竞赛数据、假设与模型，不构成临床检测建议；R² 衡量连续值拟合程度，也不等同于分类准确率。</div>
+          <p class="source-note">项目描述依据个人简历与竞赛建模记录整理；奖项属于团队成果，个人贡献为建模部分。</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="case-next"><div><span>[BACK TO INDEX]</span><h2>继续查看全部项目</h2></div><a href="../index.html#projects">PROJECT INDEX ↗</a></section>
+  </main>
+  <footer class="case-footer"><span>© 2026 李定山 LI DINGSHAN</span><span>DATA SCIENCE · MODELING · DECISION</span></footer>
+  <script src="../project.js" defer></script>
+</body>
+</html>

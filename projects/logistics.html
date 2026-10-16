@@ -1,1 +1,108 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="比较太空电梯与火箭运输方案，将故障风险与环境约束纳入月球物流模型，分析组合策略的表现。"><meta name="theme-color" content="#17392f"><title>在时间、成本与碳预算之间做取舍 | 李定山 LI Dingshan</title><link rel="stylesheet" href="../style.css"><link rel="canonical" href="https://woshanli351-afk.github.io/projects/logistics.html"><meta property="og:type" content="website"><meta property="og:url" content="https://woshanli351-afk.github.io/projects/logistics.html"><meta property="og:site_name" content="李定山 LI Dingshan · 数据科学"></head><body><a class="skip" href="#main">跳到正文</a><div class="wrap"><header><a class="brand" href="../index.html">李定山<span class="name-en"> LI Dingshan</span><span style="color:#ae512f"> / </span>DS</a><nav aria-label="主导航"><a href="../index.html#awards">荣誉</a><a href="../index.html#projects">项目</a><a href="../index.html#about">关于</a><a href="../index.html#contact">联系</a></nav></header><main id="main" class="article"><a class="more" href="../index.html#projects">← 返回项目</a><p class="eyebrow" style="margin-top:40px">MCM / ICM · Finalist</p><h1>在时间、成本与碳预算之间做取舍</h1><p class="intro">比较太空电梯与火箭运输方案，将故障风险与环境约束纳入月球物流模型，分析组合策略的表现。</p><div class="callout"><strong>10,000</strong> · 次蒙特卡洛模拟</div><p class="award-proof">2026 Mathematical Contest in Modeling<br><strong>Finalist · 美赛 F 奖</strong></p><h2>问题与目标</h2><p>在竞赛设定下，为一亿吨物资建立月球运输方案。需要比较运输方式，并同时考虑时间、成本、可靠性与碳预算。</p><h2>项目工作</h2><ul><li>建立太空电梯与火箭运输的时间和成本模型，比较单一方案与组合策略。</li><li>进行 10,000 次蒙特卡洛模拟，分析故障条件下的工期和成本。</li><li>采用弹性敏感性分析识别工期风险因素，并构建供水与环境成本模型，以惩罚项处理碳预算约束。</li></ul><h2>结果与边界</h2><p>模型设定下，组合方案将运输时间由 266.67 年缩短至 109.65 年。火箭发射成功率是分析中的主要工期风险驱动因素。数值为竞赛模型结果，不是真实运输系统的部署收益。</p><h2>我的角色</h2><p>团队成员。参与运输建模、随机模拟及环境约束下的方案分析。团队获 2026 年 MCM/ICM Finalist。</p><p class="muted" style="margin-top:45px;font-size:13px">项目概述依据个人简历整理。详细实验配置与结果以项目报告为准。</p><a class="button" href="../index.html#contact">交流这个项目 ↗</a></main><footer><span>© 2026 李定山 LI Dingshan</span><span>数据科学 · 数学建模 · 决策优化</span></footer></div></body></html>
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="比较太空电梯与火箭运输方案，将故障风险与环境约束纳入月球物流模型，分析组合策略的表现。">
+  <meta name="theme-color" content="#1f49b6"><title>在时间、成本与碳预算之间做取舍 | 李定山 LI Dingshan</title>
+  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../project.css"><link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://woshanli351-afk.github.io/projects/logistics.html"><meta property="og:type" content="website"><meta property="og:url" content="https://woshanli351-afk.github.io/projects/logistics.html"><meta property="og:site_name" content="李定山 LI Dingshan · 数据科学">
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">跳到正文</a><div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="case-header">
+    <a class="case-brand" href="../index.html"><span>LI DINGSHAN</span><small>李定山 · DATA SCIENCE</small></a>
+    <nav aria-label="主导航"><a href="../index.html">主页</a><a href="../index.html#honors">荣誉</a><a href="../index.html#projects">项目</a><a href="../index.html#contact">联系</a></nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero">
+      <a class="back-link" href="../index.html#projects">← 返回项目索引</a>
+      <div class="case-heading reveal">
+        <p class="case-label">[CASE 02] MCM / ICM · OPERATIONS RESEARCH</p>
+        <h1 class="case-display">LUNAR<br><span class="outline">LOGISTICS</span></h1>
+        <h2 class="case-title">在时间、成本与碳预算之间做取舍</h2>
+        <p class="case-summary">比较太空电梯、火箭与混合运输，将故障风险、时间成本和环境约束放进同一套决策模型。</p>
+      </div>
+      <div class="hero-art reveal" aria-label="月球物流路径与约束优化示意图">
+        <svg viewBox="0 0 800 520" role="img" aria-label="月球物流路径与约束优化的抽象图">
+          <circle class="moon" cx="585" cy="270" r="168"/><circle cx="105" cy="340" r="24" fill="currentColor"/><circle cx="305" cy="158" r="16" fill="currentColor"/>
+          <path class="draw" d="M105 340C226 307 194 174 305 158s181 89 280 112" fill="none" stroke="currentColor" stroke-width="5"/><path d="M105 340L585 270M305 158L585 270" stroke="currentColor" stroke-width="1" stroke-dasharray="7 8"/>
+          <g class="bars"><rect x="70" y="70" width="34" height="76"/><rect x="118" y="48" width="34" height="98"/><rect x="166" y="91" width="34" height="55"/></g><text x="68" y="177">COST / TIME / CARBON</text>
+        </svg><span class="art-caption"><span>EARTH → MOON</span><span>/002</span></span>
+      </div>
+      <div class="case-meta reveal">
+        <p><span>IDEAL HYBRID TIME</span><strong>109.65 YEARS</strong></p>
+        <p><span>MONTE CARLO</span><strong>10,000 RUNS</strong></p>
+        <p><span>OFFICIAL HONOR</span><strong>FINALIST</strong></p>
+      </div>
+    </section>
+
+    <section class="award-banner reveal"><span>[HONOR]</span><strong>2026 Mathematical Contest in Modeling</strong><em>美赛 F 奖</em></section>
+
+    <div class="case-content">
+      <section class="case-section" id="problem">
+        <div class="section-index reveal"><span>[01]</span><strong>PROBLEM</strong></div>
+        <div class="section-body reveal">
+          <h2>一亿吨物资，三种方案，四类约束。</h2>
+          <p class="lead">竞赛要求为一亿吨物资建立月球运输方案。时间、成本、可靠性和碳预算相互牵制，不能只优化其中一个指标。</p>
+          <p class="detail-copy">模型分别评估太空电梯、火箭和并行混合运输。在理想条件下先建立容量与成本基线，再把故障、维修与发射不确定性加入随机模拟，最后用敏感性和环境约束检验方案。</p>
+        </div>
+      </section>
+
+      <section class="case-section" id="method">
+        <div class="section-index reveal"><span>[02]</span><strong>METHOD</strong></div>
+        <div class="section-body reveal">
+          <h2>从确定性容量，到非理想条件下的风险分布。</h2>
+          <div class="process-flow">
+            <article class="process-step reveal"><span>/001 · DEFINE</span><h3>定义变量</h3><p>确定运输质量、运力、分配比例、成本与碳预算。</p></article>
+            <article class="process-step reveal"><span>/002 · MODEL</span><h3>建立基线</h3><p>分别计算电梯、火箭和并行混合方案的时间与成本。</p></article>
+            <article class="process-step reveal"><span>/003 · SIMULATE</span><h3>模拟故障</h3><p>运行 10,000 次蒙特卡洛，记录完成时间与尾部风险。</p></article>
+            <article class="process-step reveal"><span>/004 · OPTIMIZE</span><h3>选择方案</h3><p>结合敏感性分析与碳预算惩罚，比较可行配置。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="comparison">
+        <div class="section-index reveal"><span>[03]</span><strong>COMPARE</strong></div>
+        <div class="section-body reveal">
+          <h2>混合方案通过并行通道缩短理想工期。</h2>
+          <table class="comparison">
+            <thead><tr><th>方案</th><th>理想完成时间</th><th>模型特点</th><th>主要风险</th></tr></thead>
+            <tbody>
+              <tr><td>太空电梯</td><td>186.22 年</td><td>以 537,000 吨/年运力形成稳定通道</td><td>维修频率、停机时长与可用率</td></tr>
+              <tr><td>火箭运输</td><td>266.67 年</td><td>十个基地并行发射，调度更灵活</td><td>发射成功率、载荷与碳排放</td></tr>
+              <tr><td>混合运输</td><td>109.65 年</td><td>58.88% 电梯 + 41.12% 火箭，使两条通道同时完成</td><td>两类系统的不确定性同时进入方案</td></tr>
+            </tbody>
+          </table>
+          <div class="result-grid">
+            <article class="result-card reveal"><span>IDEAL BASELINE</span><strong>109.65</strong><p>混合方案在理想条件下的最短完成时间。</p></article>
+            <article class="result-card reveal"><span>NON-IDEAL EXPECTATION</span><strong>178.99</strong><p>10,000 次模拟下混合方案的期望完成时间。</p></article>
+            <article class="result-card reveal"><span>ALLOCATION</span><strong>58.88%</strong><p>分配给太空电梯的质量比例，其余 41.12% 由火箭承担。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="evidence">
+        <div class="section-index reveal"><span>[04]</span><strong>EVIDENCE</strong></div>
+        <div class="section-body reveal">
+          <h2>个人贡献集中在建模部分。</h2>
+          <div class="contribution-box reveal">
+            <div class="contribution-head"><span>[PERSONAL CONTRIBUTION]</span><strong>运输、风险与环境约束建模</strong></div>
+            <ul class="evidence-list">
+              <li><span>/001</span><strong>运输建模</strong><p>把运力与分配比例转化为三类方案的时间和成本表达式。</p></li>
+              <li><span>/002</span><strong>随机风险</strong><p>将故障、维修和发射表现纳入 10,000 次蒙特卡洛模拟。</p></li>
+              <li><span>/003</span><strong>约束分析</strong><p>使用弹性敏感性分析，并以拉格朗日与惩罚形式处理碳预算。</p></li>
+            </ul>
+          </div>
+          <div class="boundary"><strong>结果边界：</strong>109.65 年来自理想容量模型；在非理想条件下，混合方案的模拟期望为 178.99 年。所有数值均是竞赛设定和假设下的模型结果，不代表真实月球运输系统的部署收益。</div>
+          <p class="source-note">项目描述依据 Team #2612400 最终论文整理；奖项属于团队成果，个人贡献为建模部分。</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="case-next"><div><span>[NEXT CASE]</span><h2>检测时机选择</h2></div><a href="nipt.html">CASE 03 ↗</a></section>
+  </main>
+  <footer class="case-footer"><span>© 2026 李定山 LI DINGSHAN</span><span>DATA SCIENCE · MODELING · DECISION</span></footer>
+  <script src="../project.js" defer></script>
+</body>
+</html>

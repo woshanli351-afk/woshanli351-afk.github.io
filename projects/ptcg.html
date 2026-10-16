@@ -1,1 +1,109 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="围绕 PTCG 对战构建策略智能体，结合行动评分、对局路由与终局决策，并通过评测环境修复和消融实验检查策略可靠性。"><meta name="theme-color" content="#17392f"><title>在不完全信息下，选择下一步行动 | 李定山 LI Dingshan</title><link rel="stylesheet" href="../style.css"><link rel="canonical" href="https://woshanli351-afk.github.io/projects/ptcg.html"><meta property="og:type" content="website"><meta property="og:url" content="https://woshanli351-afk.github.io/projects/ptcg.html"><meta property="og:site_name" content="李定山 LI Dingshan · 数据科学"></head><body><a class="skip" href="#main">跳到正文</a><div class="wrap"><header><a class="brand" href="../index.html">李定山<span class="name-en"> LI Dingshan</span><span style="color:#ae512f"> / </span>DS</a><nav aria-label="主导航"><a href="../index.html#awards">荣誉</a><a href="../index.html#projects">项目</a><a href="../index.html#about">关于</a><a href="../index.html#contact">联系</a></nav></header><main id="main" class="article"><a class="more" href="../index.html#projects">← 返回项目</a><p class="eyebrow" style="margin-top:40px">Kaggle · 策略智能体</p><h1>在不完全信息下，选择下一步行动</h1><p class="intro">围绕 PTCG 对战构建策略智能体，结合行动评分、对局路由与终局决策，并通过评测环境修复和消融实验检查策略可靠性。</p><div class="callout"><strong>679 / 6,807</strong> · 竞赛排名 · 铜牌</div><p class="award-proof">2026 Kaggle 竞赛铜牌 · 679 / 6,807 队<br><a href="https://www.kaggle.com/BNBUDINGSHANLee21">Kaggle 个人主页 ↗</a> · <a href="https://www.kaggle.com/competitions/pokemon-tcg-ai-battle">比赛页面 ↗</a></p><h2>问题与目标</h2><p>游戏决策需要在随机环境与不完全信息下选择行动。项目关注如何组合局面判断、行动评分和终局逻辑，构建可评测的策略。</p><h2>项目工作</h2><ul><li>开发结合基于树的行动评分与公开状态对局路由的混合智能体。</li><li>通过 Python 模块隔离与每局策略记忆重置，修复评测中的跨局状态泄漏。</li><li>实现终局奖赏转换与伤害转移逻辑，开展 6,600 局针对性对战与消融实验。</li></ul><h2>结果与边界</h2><p>团队获得铜牌，排名 679/6,807。6,600 局为针对性验证规模，并不表示全部比赛对局数；局部实验结果不能直接代替官方竞赛表现。</p><h2>我的角色</h2><p>团队成员。工作涉及策略开发、评测环境修复和针对性实验。</p><p class="muted" style="margin-top:45px;font-size:13px">项目概述依据个人简历整理。详细实验配置与结果以项目报告为准。</p><a class="button" href="../index.html#contact">交流这个项目 ↗</a></main><footer><span>© 2026 李定山 LI Dingshan</span><span>数据科学 · 数学建模 · 决策优化</span></footer></div></body></html>
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="围绕 PTCG 对战构建策略智能体，结合行动评分、对局路由与终局决策，并通过评测环境修复和消融实验检查策略可靠性。">
+  <meta name="theme-color" content="#1f49b6"><title>在不完全信息下，选择下一步行动 | 李定山 LI Dingshan</title>
+  <link rel="stylesheet" href="../style.css"><link rel="stylesheet" href="../project.css"><link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://woshanli351-afk.github.io/projects/ptcg.html"><meta property="og:type" content="website"><meta property="og:url" content="https://woshanli351-afk.github.io/projects/ptcg.html"><meta property="og:site_name" content="李定山 LI Dingshan · 数据科学">
+</head>
+<body class="case-page">
+  <a class="skip" href="#main">跳到正文</a><div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header class="case-header">
+    <a class="case-brand" href="../index.html"><span>LI DINGSHAN</span><small>李定山 · DATA SCIENCE</small></a>
+    <nav aria-label="主导航"><a href="../index.html">主页</a><a href="../index.html#honors">荣誉</a><a href="../index.html#projects">项目</a><a href="../index.html#contact">联系</a></nav>
+  </header>
+
+  <main id="main">
+    <section class="case-hero">
+      <a class="back-link" href="../index.html#projects">← 返回项目索引</a>
+      <div class="case-heading reveal">
+        <p class="case-label">[CASE 01] KAGGLE · STRATEGY AGENT</p>
+        <h1 class="case-display">STRATEGY<br><span class="outline">UNDER</span><br>UNCERTAINTY</h1>
+        <h2 class="case-title">在不完全信息下，选择下一步行动</h2>
+        <p class="case-summary">围绕局面判断、行动评分与终局决策构建策略智能体，再通过自动化对战与消融实验验证可靠性。</p>
+      </div>
+      <div class="hero-art reveal" aria-label="策略决策与对局评测示意图">
+        <svg viewBox="0 0 800 520" role="img" aria-label="策略决策与对局评测的抽象图">
+          <defs><pattern id="grid-ptcg" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="currentColor" stroke-width="1" opacity=".3"/></pattern></defs>
+          <rect width="800" height="520" fill="url(#grid-ptcg)"/><path class="draw" d="M40 390C145 390 139 132 254 132s115 258 230 258 113-258 276-258" fill="none" stroke="currentColor" stroke-width="5"/>
+          <circle cx="254" cy="132" r="44" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="484" cy="390" r="44" fill="none" stroke="currentColor" stroke-width="3"/>
+          <path d="M85 78h180M535 442h180" stroke="currentColor" stroke-width="10"/><text x="72" y="112">ACTION SCORE</text><text x="542" y="418">EVALUATION</text>
+        </svg><span class="art-caption"><span>PUBLIC STATE → ACTION</span><span>/001</span></span>
+      </div>
+      <div class="case-meta reveal">
+        <p><span>OFFICIAL RESULT</span><strong>679 / 6,807</strong></p>
+        <p><span>VALIDATION SCALE</span><strong>6,600 GAMES</strong></p>
+        <p><span>FOCUS</span><strong>AGENT / EVAL</strong></p>
+      </div>
+    </section>
+
+    <section class="award-banner reveal"><span>[HONOR]</span><strong>2026 Kaggle · 竞赛铜牌</strong><em>TOP 10%</em></section>
+
+    <div class="case-content">
+      <section class="case-section" id="problem">
+        <div class="section-index reveal"><span>[01]</span><strong>PROBLEM</strong></div>
+        <div class="section-body reveal">
+          <h2>决策质量取决于局面，也取决于评测是否可信。</h2>
+          <p class="lead">PTCG 对战包含随机性与不完全信息。项目需要在有限可见状态下选择行动，同时避免评测程序把上一局的状态带入下一局。</p>
+          <p class="detail-copy">因此任务被拆成两个相互依赖的问题：一是如何组合局面判断、行动评分和终局逻辑；二是如何建立隔离、可重复的对局环境，让策略变化能够被可靠比较。</p>
+        </div>
+      </section>
+
+      <section class="case-section" id="method">
+        <div class="section-index reveal"><span>[02]</span><strong>METHOD</strong></div>
+        <div class="section-body reveal">
+          <h2>从公开状态到可比较的策略结果。</h2>
+          <div class="process-flow">
+            <article class="process-step reveal"><span>/001 · READ</span><h3>读取局面</h3><p>整理公开状态、可行动作与终局条件。</p></article>
+            <article class="process-step reveal"><span>/002 · SCORE</span><h3>行动评分</h3><p>使用基于树的规则对候选动作排序。</p></article>
+            <article class="process-step reveal"><span>/003 · ROUTE</span><h3>策略路由</h3><p>根据公开局面进入不同决策分支。</p></article>
+            <article class="process-step reveal"><span>/004 · TEST</span><h3>自动评测</h3><p>重置每局记忆，开展针对性对战与消融实验。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" id="comparison">
+        <div class="section-index reveal"><span>[03]</span><strong>COMPARE</strong></div>
+        <div class="section-body reveal">
+          <h2>不同模块解决不同层次的问题。</h2>
+          <table class="comparison">
+            <thead><tr><th>方案</th><th>核心作用</th><th>优势</th><th>主要边界</th></tr></thead>
+            <tbody>
+              <tr><td>单一规则策略</td><td>按固定优先级选择动作</td><td>简单、可解释、适合作为基线</td><td>难以适应局面变化</td></tr>
+              <tr><td>行动评分</td><td>对候选动作进行排序</td><td>能同时考虑多个局面特征</td><td>依赖特征与评分规则质量</td></tr>
+              <tr><td>混合智能体</td><td>公开状态路由 + 行动评分 + 终局逻辑</td><td>按场景切换决策机制</td><td>必须通过消融实验确认每个模块的价值</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="case-section" id="evidence">
+        <div class="section-index reveal"><span>[04]</span><strong>EVIDENCE</strong></div>
+        <div class="section-body reveal">
+          <h2>贡献证据落在策略、评测和实验三个环节。</h2>
+          <div class="result-grid">
+            <article class="result-card reveal"><span>RANK</span><strong>679</strong><p>官方排名 679 / 6,807，获得竞赛铜牌。</p></article>
+            <article class="result-card reveal"><span>TARGETED TESTS</span><strong>6,600</strong><p>针对性对战规模，用于比较策略变化。</p></article>
+            <article class="result-card reveal"><span>RELIABILITY</span><strong>RESET</strong><p>通过模块隔离和每局记忆重置，降低跨局状态泄漏。</p></article>
+          </div>
+          <div class="contribution-box reveal">
+            <div class="contribution-head"><span>[PERSONAL CONTRIBUTION]</span><strong>策略开发、评测环境修复与针对性实验</strong></div>
+            <ul class="evidence-list">
+              <li><span>/001</span><strong>策略实现</strong><p>参与混合智能体、行动评分与终局逻辑开发。</p></li>
+              <li><span>/002</span><strong>评测修复</strong><p>处理 Python 模块隔离与每局策略记忆重置。</p></li>
+              <li><span>/003</span><strong>实验验证</strong><p>组织自动化对战和消融实验，检查改动是否稳定。</p></li>
+            </ul>
+          </div>
+          <div class="boundary"><strong>结果边界：</strong>6,600 局是针对性验证规模，不等于官方比赛总对局数；局部实验结果也不能替代官方榜单表现。</div>
+          <p class="source-note">项目描述依据个人简历、本地策略代码与竞赛资料整理。</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="case-next"><div><span>[NEXT CASE]</span><h2>月球物流运输优化</h2></div><a href="logistics.html">CASE 02 ↗</a></section>
+  </main>
+  <footer class="case-footer"><span>© 2026 李定山 LI DINGSHAN</span><span>DATA SCIENCE · MODELING · DECISION</span></footer>
+  <script src="../project.js" defer></script>
+</body>
+</html>
